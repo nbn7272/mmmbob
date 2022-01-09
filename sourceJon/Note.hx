@@ -103,25 +103,46 @@ class Note extends FlxSprite
 		var daStage:String = PlayState.curStage;
 		if (warning)
 		{
-			frames = Paths.getSparrowAtlas('bob/CustomNotes');
+			frames = Paths.getSparrowAtlas('iamnotgoingtofuckingeditthesprite');
 
-				animation.addByPrefix('greenScroll', 'vertedUp');
-				animation.addByPrefix('redScroll', 'vertedRight');
-				animation.addByPrefix('blueScroll', 'vertedDown');
-				animation.addByPrefix('purpleScroll', 'vertedLeft');
-				animation.addByPrefix('whiteScroll', 'vertedWhite');
-				animation.addByPrefix('blackScroll', 'vertedBlack');
-				animation.addByPrefix('darkScroll', 'vertedDark');
-				animation.addByPrefix('violetScroll', 'vertedViolet');
-				animation.addByPrefix('yellowScroll', 'vertedYellow');
+				animation.addByPrefix('greenScroll', 'green0');
+				animation.addByPrefix('redScroll', 'red0');
+				animation.addByPrefix('blueScroll', 'blue0');
+				animation.addByPrefix('purpleScroll', 'purple0');
+				animation.addByPrefix('whiteScroll', 'white0');
+				animation.addByPrefix('yellowScroll', 'yellow0');
+				animation.addByPrefix('violetScroll', 'violet0');
+				animation.addByPrefix('blackScroll', 'black0');
+				animation.addByPrefix('darkScroll', 'dark0');
 
-				setGraphicSize(Std.int(width * 0.7));
+
+				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('greenholdend', 'green hold end');
+				animation.addByPrefix('redholdend', 'red hold end');
+				animation.addByPrefix('blueholdend', 'blue hold end');
+				animation.addByPrefix('whiteholdend', 'white hold end');
+				animation.addByPrefix('yellowholdend', 'yellow hold end');
+				animation.addByPrefix('violetholdend', 'violet hold end');
+				animation.addByPrefix('blackholdend', 'black hold end');
+				animation.addByPrefix('darkholdend', 'dark hold end');
+
+				animation.addByPrefix('purplehold', 'purple hold piece');
+				animation.addByPrefix('greenhold', 'green hold piece');
+				animation.addByPrefix('redhold', 'red hold piece');
+				animation.addByPrefix('bluehold', 'blue hold piece');
+				animation.addByPrefix('whitehold', 'white hold piece');
+				animation.addByPrefix('yellowhold', 'yellow hold piece');
+				animation.addByPrefix('violethold', 'violet hold piece');
+				animation.addByPrefix('blackhold', 'black hold piece');
+				animation.addByPrefix('darkhold', 'dark hold piece');
+
+				setGraphicSize(Std.int(width * noteScale));
 				updateHitbox();
 				antialiasing = true;
 		}
 		else if (mustHitNotes)
 		{
-			frames = Paths.getSparrowAtlas('bob/CustomNotes');
+			frames = Paths.getSparrowAtlas('holyshitfuckingswhjiott');
 			/*emitter = new FlxEmitter();
 			for (i in 0 ... 10)
 			{
@@ -136,12 +157,38 @@ class Note extends FlxSprite
 			emitter.start(false, 1, 0.02);
 			didnt work lol*/
 			
-				animation.addByPrefix('greenScroll', 'hitUp');
-				animation.addByPrefix('redScroll', 'hitRight');
-				animation.addByPrefix('blueScroll', 'hitDown');
-				animation.addByPrefix('purpleScroll', 'hitLeft');
+				animation.addByPrefix('greenScroll', 'green0');
+				animation.addByPrefix('redScroll', 'red0');
+				animation.addByPrefix('blueScroll', 'blue0');
+				animation.addByPrefix('purpleScroll', 'purple0');
+				animation.addByPrefix('whiteScroll', 'white0');
+				animation.addByPrefix('yellowScroll', 'yellow0');
+				animation.addByPrefix('violetScroll', 'violet0');
+				animation.addByPrefix('blackScroll', 'black0');
+				animation.addByPrefix('darkScroll', 'dark0');
 
-				setGraphicSize(Std.int(width * 0.7));
+
+				animation.addByPrefix('purpleholdend', 'pruple end hold');
+				animation.addByPrefix('greenholdend', 'green hold end');
+				animation.addByPrefix('redholdend', 'red hold end');
+				animation.addByPrefix('blueholdend', 'blue hold end');
+				animation.addByPrefix('whiteholdend', 'white hold end');
+				animation.addByPrefix('yellowholdend', 'yellow hold end');
+				animation.addByPrefix('violetholdend', 'violet hold end');
+				animation.addByPrefix('blackholdend', 'black hold end');
+				animation.addByPrefix('darkholdend', 'dark hold end');
+
+				animation.addByPrefix('purplehold', 'purple hold piece');
+				animation.addByPrefix('greenhold', 'green hold piece');
+				animation.addByPrefix('redhold', 'red hold piece');
+				animation.addByPrefix('bluehold', 'blue hold piece');
+				animation.addByPrefix('whitehold', 'white hold piece');
+				animation.addByPrefix('yellowhold', 'yellow hold piece');
+				animation.addByPrefix('violethold', 'violet hold piece');
+				animation.addByPrefix('blackhold', 'black hold piece');
+				animation.addByPrefix('darkhold', 'dark hold piece');
+
+				setGraphicSize(Std.int(width * noteScale));
 				updateHitbox();
 				antialiasing = true;
 		}
